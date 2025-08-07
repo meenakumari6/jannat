@@ -100,9 +100,9 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
   fs.removeSync(pathAvt2);
-  return api.sendMessage({ body: `♡   ∩_∩  
+  return api.sendMessage({ body: `‎♡   ∩_∩  
  （„• ֊ •„)♡  
-╭─∪∪────♡──────⟡  │${name1 ├───────♡──────⟡                           │${name2}\n╰───────♡──────⟡ ${tile}%`,
+╭─∪∪────♡──────⟡  │${name1}\n ├───────♡──────⟡                           │${name2}\n╰───────♡──────⟡ ${tile}%`,
             mentions: [{
           tag: `${name2}`,
           id: id2
@@ -110,4 +110,4 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
       event.threadID,
       () => fs.unlinkSync(pathImg),
       event.messageID);
-  }
+          }
