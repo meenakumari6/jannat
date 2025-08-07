@@ -15,8 +15,8 @@ module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils
   let react = event.body.toLowerCase();
   if(react.includes("hate") ||
      react.includes("🤬") ||
-     react.includes("🤮") ||
-react.includes("👹")) {
+     react.includes("bsdk") ||
+react.includes("bc")) {
     var msg = {
         body: `🤬i hate you🤬👈`,attachment: fs.createReadStream(__dirname + `/noprefix/bhosdike.mp3`)
       }
