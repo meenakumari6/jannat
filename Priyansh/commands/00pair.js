@@ -16,7 +16,7 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', '20250611_193805.png');
+    const path = resolve(__dirname, 'cache/canvas', 'ipairing.jpg');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
     if (!existsSync(path)) await downloadFile("https://i.imgur.com/0a0lD5l.jpeg", path);
 }
@@ -28,7 +28,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let pairing_img = await jimp.read(__root + "/20250611_193805.png");
+    let pairing_img = await jimp.read(__root + "/ipairing.jpg");
     let pathImg = __root + `/pairing_${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
@@ -41,7 +41,7 @@ async function makeImage({ one, two }) {
 
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    pairing_img.composite(circleOne.resize(400, 350), 90, 110).composite(circleTwo.resize(400, 350), 850, 110);
+    pairing_img.composite(circleOne.resize(350, 350), 90, 110).composite(circleTwo.resize(350, 350), 850, 110);
 
     let raw = await pairing_img.getBufferAsync("image/png");
 
