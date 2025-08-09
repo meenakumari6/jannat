@@ -292,8 +292,8 @@ if ((event.body.toLowerCase() == "himmat he") || (event.body.toLowerCase() == "b
      return api.sendMessage("️Guchu Guchu Si aakhe😒", threadID);
    };
 
-  if ((event.body.toLowerCase() == "hack") || (event.body.toLowerCase() == " iski id hack karo bot")) {
-     return api.sendMessage("️️https://www.facebook.com/share/1AJyE7TBDr/? mibextid=wwXlfr abhi id hack karti hu iski😹", threadID);
+  if ((event.body.toLowerCase() == "happy rakhi") || (event.body.toLowerCase() == "happy rakshabandhan")) {
+     return api.sendMessage("️️Happy raksha Bandhan behno or bhaiyo🥰🥰", threadID);
    };
 
    if ((event.body.toLowerCase() == "koi nahi apna") || (event.body.toLowerCase() == "sab matlbi hai") || (event.body.toLowerCase() == "koi pyar nhi karta")) {
