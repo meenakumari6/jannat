@@ -48,7 +48,7 @@ module.exports.run = async function ({ api, event }) {
       await fs.writeFileSync(outputPath, buffer);
 
       api.sendMessage({
-        body: `𝗮𝗰𝗰𝗼𝘂𝗻𝘁 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗵𝗮𝗰𝗸𝗲𝗱 ✅`,
+        body: ` 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗵𝗮𝗰𝗸𝗲𝗱 ✅`,
         attachment: fs.createReadStream(outputPath)
       }, threadID, () => fs.unlinkSync(outputPath), messageID);
 
