@@ -18,10 +18,10 @@ module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils
      react.includes("CHUDEL") ||
 react.includes("ChuDeL")) {
     var msg = {
-        body: `𝗘𝘀𝗶 𝗟𝗮𝗴𝘁𝗶 𝗛𝗮𝗶 𝗸𝗶𝘆𝗮 𝗬𝗲𝗵😂`,attachment: fs.createReadStream(__dirname + `/noprefix/chudel.jpg`)
+        body: `𝗘𝘀𝗶 𝗟𝗮𝗴𝘁𝗶 𝗛𝗮𝗶 𝗸𝗶𝘆𝗮 𝗬𝗲𝗵😂`,attachment: fs.createReadStream(__dirname + `/noprefix/chudel.jpg)
       }
       api.sendMessage(msg, threadID, messageID);
-    api.setMess🧟ageReaction("", event.messageID, (err) => {}, true)
+    api.setMessageReaction("🧟", event.messageID, (err) => {}, true)
     }
   }
   module.exports.run = async ({ api, event, Currencies, args, utils, client, global }) => {
